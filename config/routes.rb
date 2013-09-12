@@ -1,4 +1,8 @@
 SampleApp::Application.routes.draw do
+  match '/contact', :to => 'pages#contact'
+  match '/help', :to => 'pages#help'
+  match '/about', :to => 'pages#about'
+
   get "pages/home"
 
   get "pages/contact"
@@ -56,7 +60,7 @@ SampleApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "Pages#home"
 
   # See how all your routes lay out with "rake routes"
 
